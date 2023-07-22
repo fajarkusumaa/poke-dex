@@ -1,0 +1,28 @@
+.left-side {
+    perspective: 400px;
+    text-align: -webkit-right;
+}
+
+.right-side {
+    perspective: 400px;
+}
+
+.left-side .left-content {
+    transform: rotateY(25deg);
+    transition: 200ms ease-in-out;
+}
+
+.left-side:hover .left-content {
+    perspective: unset;
+    transform: rotateY(0) scale(1.1);
+}
+
+.right-side .right-content {
+    transform: rotateY(-25deg);
+    transition: 200ms ease-in-out;
+}
+
+.right-side:hover .right-content {
+    perspective: unset;
+    transform: rotateY(0) scale(1.1);
+}
