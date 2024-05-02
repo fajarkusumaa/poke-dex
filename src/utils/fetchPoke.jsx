@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const fetchPoke = () => {
-    const [pokename, setPokename] = useState(3);
+    const [pokename, setPokename] = useState(5);
 
     const [poke, setPoke] = useState();
 
@@ -24,7 +24,10 @@ const fetchPoke = () => {
                     weight: response.data.weight,
                     abilities: response.data.abilities,
                     type: response.data.types,
-                    varieties: responseForm.data.varieties
+                    HP: response.data.HP,
+                    varieties: responseForm.data.varieties,
+                    img: response.data.sprites.other["official-artwork"]
+                        .front_default
                 });
             } catch (err) {
                 console.error("error");
@@ -34,13 +37,6 @@ const fetchPoke = () => {
         fetchData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-    console.log(poke);
-
-    if (!poke)
-        <>
-            <div>Loading</div>
-        </>;
 
     return poke;
 };

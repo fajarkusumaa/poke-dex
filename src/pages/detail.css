@@ -1,10 +1,10 @@
 .left-side {
-    perspective: 400px;
+    perspective: 650px;
     text-align: -webkit-right;
 }
 
 .right-side {
-    perspective: 400px;
+    perspective: 650px;
 }
 
 .left-side .left-content {
